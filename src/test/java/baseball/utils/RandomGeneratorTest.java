@@ -13,7 +13,7 @@ import static baseball.utils.RandomGenerator.getRandomPlayerBall;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-class RandomGeneratorTest {
+public class RandomGeneratorTest {
 
     @Test
     @DisplayName("서로 다른 수로 이루어진 숫자인지 확인")

@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
 
-class PlayerBallTest {
+public class PlayerBallTest {
     @ParameterizedTest
     @ValueSource(strings = {
             "111","999","123","789"
