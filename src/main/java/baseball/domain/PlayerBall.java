@@ -3,11 +3,12 @@ package baseball.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import static baseball.utils.ValidateUtils.validation;
+
 public class PlayerBall extends Ball{
     public static final int MAX_RANGE = 3;
     public static final int MIN_VALUE = 1;
     public static final int MAX_VALUE = 9;
-    private static final String VALID_REGEX = "["+MIN_VALUE+"-"+MAX_VALUE+"]{"+MAX_RANGE+"}";
 
     private PlayerBall(List<Integer> numbers) {
         super(numbers);
@@ -24,10 +25,6 @@ public class PlayerBall extends Ball{
     }
 
 
-    private static void validation(String numbers) {
-        if(!numbers.matches(VALID_REGEX)){
-            throw new IllegalArgumentException("숫자가 잘못 입력되었습니다.");
-        }
-    }
+
 
 }
