@@ -15,7 +15,7 @@ public class RandomGenerator{
         Set<Integer> distinctNumberSet = new LinkedHashSet<>();
 
         while(distinctNumberSet.size() < MAX_RANGE) {
-            distinctNumberSet.add(pickNumberInRange(MIN_VALUE, MAX_VALUE));
+            distinctNumberSet.add(pickNumberInRange(1, 9));
         }
 
         return new Ball(new ArrayList<>(distinctNumberSet));

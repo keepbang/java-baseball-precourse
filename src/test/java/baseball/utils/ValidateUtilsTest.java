@@ -29,7 +29,7 @@ class ValidateUtilsTest {
     void 입력숫자_검증_실패(String input) {
 
         assertThatIllegalArgumentException().isThrownBy(() -> validation(input))
-        .withMessageMatching(MAX_RANGE + "자리 숫자를 입력해 주십시오.");
+        .withMessageMatching("1부터 9까지의 숫자 "+MAX_RANGE+"자리를 입력해주세요.");
     }
 
     @ParameterizedTest

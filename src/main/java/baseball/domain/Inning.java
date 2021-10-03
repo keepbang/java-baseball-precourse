@@ -1,5 +1,7 @@
 package baseball.domain;
 
+import baseball.type.ScoreType;
+
 import java.util.List;
 
 import static baseball.domain.PlayerBall.MAX_RANGE;
@@ -15,17 +17,20 @@ public class Inning {
         List<Integer> randomNumbers = randomBall.getNumbers();
         for (int i = 0; i < randomNumbers.size(); i++) {
             Integer randomNumber = randomNumbers.get(i);
-            refereePlay(playerBall, randomNumber, i);
+            ScoreType scoreType = refereePlay(playerBall, randomNumber, i);
+            score.refereeScore(scoreType);
         }
     }
 
-    private void refereePlay(Ball playerBall,int randomNumber, int round){
+    private ScoreType refereePlay(Ball playerBall, int randomNumber, int round){
         List<Integer> playerNumbers = playerBall.getNumbers();
         if(playerNumbers.get(round) == randomNumber){
-            score.addStrike();
-        }else if(playerNumbers.contains(randomNumber)){
-            score.addBall();
+            return ScoreType.STRIKE;
         }
+        if(playerNumbers.contains(randomNumber)){
+            return ScoreType.BALL;
+        }
+        return ScoreType.NOTHING;
     }
 
     public boolean isGameEnd(){
