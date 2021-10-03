@@ -7,6 +7,18 @@ public class OutputView {
         System.out.print("숫자를 입력해주세요 : ");
     }
 
+    public static void gameEndOutput(){
+        System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 끝");
+    }
+
+    public static void gameRetryAnswer(){
+        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+    }
+
+    public static void printError(String errorMessage){
+        System.out.println("[ERROR] " + errorMessage);
+    }
+
     public static void inningResultOutput(Score score){
         int strike = score.getStrike();
         int ball = score.getBall();

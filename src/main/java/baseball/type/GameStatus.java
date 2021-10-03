@@ -1,4 +1,4 @@
-package baseball.domain;
+package baseball.type;
 
 public enum GameStatus {
     RESTART("1"), END("2"), ERROR("0");

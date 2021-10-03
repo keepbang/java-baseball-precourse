@@ -2,7 +2,7 @@ package baseball.controller;
 
 import baseball.domain.Ball;
 
-import baseball.domain.GameStatus;
+import baseball.type.GameStatus;
 import baseball.utils.RandomGenerator;
 import nextstep.utils.Console;
 
